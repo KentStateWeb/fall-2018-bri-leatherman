@@ -4,6 +4,16 @@
     orange rgb(232,130,81)
 */
 
+nav ul{
+  list-style-type:none;
+  display:flex;
+  justify-conent:space-between;
+}
+
+nav li{
+  text-decoration:none;
+}
+
 body {
   max-width: 1000px;
   padding: 1em;
@@ -25,6 +35,7 @@ footer{
   font-family: oswald, sans-serif;
   font-weight: 300;
   font-style: normal;
+  max-width: 100%;
 }
 
 .footertitle{
@@ -40,4 +51,6 @@ footer ul{
   justify-content:space-between;
   margin:0;
   padding:1em;
+  padding-top:0;
+  padding-bottom:0;
 }
