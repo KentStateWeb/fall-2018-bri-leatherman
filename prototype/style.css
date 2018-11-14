@@ -1,11 +1,12 @@
 body {
   max-width: 1000px;
   padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Athelas, serif;
 }
 
 div, section, main, aside, header, footer {
   border: 1px solid lightgray;
   padding: .5em;
   margin-bottom: 1em;
+  font-family: Oswald, sans-serif;
 }
