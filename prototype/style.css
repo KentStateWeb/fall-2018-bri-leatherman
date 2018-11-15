@@ -3,47 +3,49 @@
     green rgb(3,63,68)
     orange rgb(232,130,81)
 */
-header{
-  background-color: rgb(3,63,68);
+.header {
+	background-color:rgb(3,63,68);
+	height:80px;
+	margin:auto;
 }
 
-header img{
-  width:40px;
-  float:left;
-}
-
-nav ul {
+.header ul {
+		margin:0 auto;
+		width:800px;
+		padding-top:30px;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+	}
+
+.header ul li {
+  display:inline;
+  color:white;
+
+	}
+.header a {
+	float:left;
+  padding-left: 32px;
+	text-align:center;
 }
 
-nav li {
-    float: right;
+
+.header ul li a img {
+	background: url('whitelogo.svg');
+	background-repeat:no-repeat;
+  height:90px;
+	display:block;
+	width:190px;
+	margin-top:-32px;
 }
 
-nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+.header ul li a{
+  text-decoration: none;
+  color:white;
 }
 
-li a:hover {
-    text-decoration:underline;
+.header ul li a:hover{
+  text-decoration: underline;
 }
 
-nav ul{
-  list-style-type:none;
-  display:flex;
-  justify-conent:space-between;
-}
-
-nav li{
-  text-decoration:none;
-}
 
 body {
   max-width: 1000px;
@@ -54,7 +56,6 @@ body {
 }
 
 div, section, main, aside, header, footer {
-  border: 1px solid lightgray;
   padding: .5em;
   margin-bottom: 1em;
   font-family: oswald, sans-serif;
