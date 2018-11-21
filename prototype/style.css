@@ -3,47 +3,45 @@
     green rgb(3,63,68)
     orange rgb(232,130,81)
 */
-.header {
-	background-color:rgb(3,63,68);
-	height:80px;
-	margin:auto;
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: rgb(3,63,68);
+  position: relative;
 }
 
-.header ul {
-		margin:0 auto;
-		width:800px;
-		padding-top:30px;
-    list-style-type: none;
-	}
-
-.header ul li {
-  display:inline;
-  color:white;
-
-	}
-.header a {
-	float:left;
-  padding-left: 32px;
-	text-align:center;
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
 }
 
-
-.header ul li a img {
-	background: url('whitelogo.svg');
-	background-repeat:no-repeat;
-  height:90px;
-	display:block;
-	width:190px;
-	margin-top:-32px;
-}
-
-.header ul li a{
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
   text-decoration: none;
-  color:white;
+  font-size: 16px;
+  display: block;
 }
 
-.header ul li a:hover{
-  text-decoration: underline;
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: rgb(232,130,81);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: rgba(169,190,192.4);
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: rgb(3,63,68);
+  color: white;
 }
 
 
@@ -53,6 +51,15 @@ body {
   font-family: athelas, serif;
   font-weight: 400;
   font-style: normal;
+}
+
+h2{
+	font-size:22px;
+}
+
+p{
+	font-size:15px;
+  font-weight: 300;
 }
 
 div, section, main, aside, header, footer {
@@ -68,21 +75,22 @@ footer{
   font-weight: 300;
   font-style: normal;
   max-width: 100%;
+	height: 100px;
+	text-align:center;
 }
 
-.footertitle{
-  font-family: oswald, sans-serif;
+.footertitle{;
   font-weight: 400;
-  font-style: normal;
   color:rgb(3,63,68);
+	font-size:16px;
+	text-decoration: underline;
+	padding-bottom: .5em;
 }
 
 footer ul{
+	font-size:13px;
   list-style-type:none;
-  display:flex;
   justify-content:space-between;
   margin:0;
-  padding:1em;
-  padding-top:0;
-  padding-bottom:0;
+	padding:0;
 }
