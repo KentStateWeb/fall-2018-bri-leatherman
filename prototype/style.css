@@ -50,6 +50,10 @@ body {
   padding: 1em;
 }
 
+h1, h2, h3{
+  color:rgb(3,63,68);
+}
+
 h2{
 	font-size:22px;
 }
@@ -89,6 +93,15 @@ p{
 }
 
 /*Home Page */
+.homep{
+  font-family: open-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:12px;
+  line-height: 1.5;
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -199,7 +212,7 @@ p{
 
 /* Agents page */
 .agent img {
-  width: 110px;
+  width: 120px;
   height: auto;
   float:left;
   padding:1em;
@@ -207,7 +220,11 @@ p{
 
 .agent h3{
   font-size:16px;
+  text-decoration: underline;
 }
+ .agent ul{
+  color:rgb(3,63,68);
+ }
 
 .agent li{
   font-size:14px;
@@ -216,7 +233,7 @@ p{
 
 .agent li a{
   text-decoration: none;
-  color:black;
+  color:rgb(3,63,68);
 }
 
 
