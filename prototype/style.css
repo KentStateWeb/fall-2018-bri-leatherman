@@ -88,6 +88,7 @@ p{
     overflow: hidden;
 }
 
+/* Sellers page */
 .sellingyourhouse{
   font-size: 18px;
 }
@@ -106,6 +107,29 @@ p{
   font-style: italic;
   font-size: 12px;
 }
+
+/* Agents page */
+.agent img {
+  width: 110px;
+  height: auto;
+  float:left;
+  padding:1em;
+}
+
+.agent h3{
+  font-size:16px;
+}
+
+.agent li{
+  font-size:14px;
+  list-style-type: none;
+}
+
+.agent li a{
+  text-decoration: none;
+  color:black;
+}
+
 
 div, section, main, aside, header, footer {
   padding: .5em;
