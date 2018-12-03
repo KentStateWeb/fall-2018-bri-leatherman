@@ -4,60 +4,68 @@
     orange rgb(232,130,81)
 */
 
-/* Style the navigation menu */
+/* Add a black background color to the top navigation */
 .topnav {
-  overflow: hidden;
-  background-color: rgb(3,63,68);
-  position: relative;
+    background-color: rgb(3,63,68);
+    overflow: hidden;
 }
 
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: none;
-}
-
-@media screen and (min-width: 500px) {
-	.topnav #myLinks {
-		font-size: 12px;}
-	}
-
-/* Style navigation menu links */
+/* Style the links inside the navigation bar */
 .topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 16px;
-  display: block;
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-@media screen and (min-width: 500px) {
-	.topnav a {
-		font-size: 20px;}
-	}
-
-/* Style the hamburger menu */
-.topnav a.icon {
-  background: rgb(232,130,81);
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
+/* Change the color of links on hover */
 .topnav a:hover {
-  background-color: rgba(169,190,192.4);
+    background-color: rgb(232,130,81);
+    color: white;
 }
 
-/* Style the active link (or home/logo) */
+/* Add an active class to highlight the current page */
 .active {
-  background-color: rgb(3,63,68);
-  color: white;
+    background-color: #4CAF50;
+    color: white;
 }
 
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
 
 body {
-  max-width: 1000px;
   padding: 1em;
+  margin:0 auto;
+  background-color: rgba(3,63,68,.1);
 }
 
 h1, h2, h3{
@@ -71,7 +79,7 @@ p{
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-    background-color: #eee;
+    background-color: white;
     color: rgb(3,63,68);
     cursor: pointer;
     padding: 18px;
@@ -85,10 +93,15 @@ p{
     font-size:14px;
 }
 
-@media screen and (min-width: 500px) {
-	.accordion {
-		font-size: 16px;}
-	}
+@media screen and (min-width:500px){
+  .accordion{
+  font-size:16px;}
+}
+
+@media screen and (min-width:800px){
+  .accordion{
+  font-size:18px;}
+}
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
@@ -103,7 +116,23 @@ p{
     overflow: hidden;
 }
 
+
+
 /*Home Page */
+.welcometomilton{
+  font-size:19px;
+}
+
+@media screen and (min-width: 500px) {
+	.welcometomilton {
+		font-size: 22px;}
+	}
+
+@media screen and (min-width: 800px) {
+	.welcometomilton {
+		font-size: 25px;}
+	}
+
 .homep{
   font-family: open-sans, sans-serif;
   font-weight: 400;
@@ -117,9 +146,23 @@ p{
 		font-size: 14px;}
 	}
 
+@media screen and (min-width: 800px) {
+	.homep {
+		font-size: 15px;}
+	}
+
+.newlistings{
+    font-size:16px;
+  }
+
 @media screen and (min-width: 500px) {
 	.newlistings {
 		font-size: 20px;}
+	}
+
+@media screen and (min-width: 800px) {
+	.newlistings {
+		font-size: 22px;}
 	}
 
 
@@ -130,7 +173,20 @@ p{
 /* Position the image container (needed to position the left and right arrows) */
 .container {
   position: relative;
+  margin: 0 auto;
 }
+
+@media screen and (min-width: 600px) {
+	.container {
+		width:90%;
+    }
+	}
+
+@media screen and (min-width: 900px) {
+	.container {
+		width:70%;
+    }
+	}
 
 /* Hide the images by default */
 .mySlides {
@@ -219,12 +275,17 @@ p{
 
 /* Sellers page */
 .sellingyourhouse{
-  font-size: 18px;
+  font-size: 19px;
 }
 
 @media screen and (min-width: 500px) {
 	.sellingyourhouse {
-		font-size: 20px;}
+		font-size: 22px;}
+	}
+
+@media screen and (min-width: 800px) {
+	.sellingyourhouse {
+		font-size: 25px;}
 	}
 
 .sellersp{
@@ -233,6 +294,7 @@ p{
   font-style: normal;
   font-size:12px;
   line-height: 1.5;
+  padding-bottom:.8em;
 }
 
 @media screen and (min-width: 500px) {
@@ -240,63 +302,115 @@ p{
 		font-size: 14px;}
 	}
 
-.sellersul, .sellersol li{
+@media screen and (min-width: 800px) {
+	.sellersp {
+		font-size: 15px;}
+	}
+
+.sellersul li, .sellersol li{
   font-family: open-sans, sans-serif;
   font-weight: 400;
   font-style: italic;
   font-size: 12px;
 }
 
+@media screen and (min-width: 500px) {
+.sellersul li, .sellersol li {
+	font-size: 14px;}
+}
+
+@media screen and (min-width: 800px) {
+.sellersul li, .sellersol li {
+	font-size: 15px;}
+}
 
 
 /* Agents page */
+
+.agent {
+    margin: 3px;
+    float:left;
+    width: 180px;
+}
+
+.agent:hover {
+    color:rgb(232,130,81);
+}
+
 .agent img {
-  width: 120px;
-  height: auto;
-  float:left;
-  padding:1em;
-}
-
-@media screen and (min-width: 500px) {
-	.agent img {
-		width: 160px;
+    width: 70%;
     height: auto;
-    }
-	}
-
-.agent h3{
-  font-size:16px;
-  text-decoration: underline;
 }
 
-@media screen and (min-width: 500px) {
-	.agent h3 {
-		font-size: 18px;}
+@media screen and (min-width: 450px) {
+	.agent img {
+		width: 90%;
+    height: auto;}
 	}
-.agent ul{
-  color:rgb(3,63,68);
- }
 
-.agent li{
+.desc {
+  text-align:left;
   font-size:14px;
-  list-style-type: none;
+}
+
+/*.agent img{
+  width:30%;
+  height:auto;
+}
+
+h3{
+  font-size:16px;
+  color:rgb(3,63,68);
 }
 
 @media screen and (min-width: 500px) {
-	.agent li {
+	h3 {
+		font-size: 20px;}
+	}
+
+@media screen and (min-width: 800px) {
+	h3 {
+		font-size: 22px;}
+	}
+
+.agent ul{
+  list-style-type: none;
+  color:rgb(3,63,68);
+  font-size:14px;
+}
+
+@media screen and (min-width: 500px) {
+	.agent ul {
 		font-size: 16px;}
 	}
 
-.agent li a{
-  text-decoration: none;
+@media screen and (min-width: 800px) {
+	.agent ul {
+		font-size: 18px;}
+	}
+
+.agent a{
   color:rgb(3,63,68);
 }
 
+@media screen and (min-width: 500px) {
+	.agent {
+		diplay:flex;
+    }
+	}
+  */
+
+/*about us */
 .aboutus{
-  font-size:20px;
+  font-size:19px;
 }
 
 @media screen and (min-width: 500px) {
+	.aboutus {
+		font-size: 22px;}
+	}
+
+@media screen and (min-width: 800px) {
 	.aboutus {
 		font-size: 25px;}
 	}
@@ -314,6 +428,11 @@ p{
 		font-size: 14px;}
 	}
 
+@media screen and (min-width: 800px) {
+	.aboutusp {
+		font-size: 15px;}
+	}
+
 
 div, section, main, aside, header, footer {
   padding: .5em;
@@ -327,17 +446,23 @@ footer{
   font-family: oswald, sans-serif;
   font-weight: 300;
   font-style: normal;
-  max-width: 100%;
+  width: 100%;
 	height: 100px;
 	text-align:center;
+  clear:both;
 }
 
 @media screen and (min-width: 500px) {
 	footer {
+		height: 70px;}
+	}
+
+@media screen and (min-width: 590px) {
+	footer {
 		height: 50px;}
 	}
 
-.footertitle{;
+.footertitle{
   font-weight: 400;
   color:rgb(3,63,68);
 	font-size:16px;
@@ -364,5 +489,15 @@ footer ul{
 		font-size: 14px;
     display:flex;
     padding-top:.4em;
+    }
+	}
+
+@media screen and (min-width: 800px) {
+	footer ul {
+		font-size: 16px;
+    display:flex;
+    padding-bottom:2em;
+    padding-left:1em;
+    padding-right:1em;
     }
 	}
