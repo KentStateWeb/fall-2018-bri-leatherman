@@ -4,64 +4,87 @@
     orange rgb(232,130,81)
 */
 
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: rgb(3,63,68);
-    overflow: hidden;
+/* Navigation */
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
+/* Navigation */
+nav{
     float: left;
-    display: block;
-    color: white;
-    padding: 14px 16px;
+    margin: 0;
+    overflow:hidden;
     text-align: center;
-    text-decoration: none;
-    font-size: 17px;
+    display:inline;
 }
 
+@media screen and (min-width: 550px) {
+  nav {
+    margin:1.5em;
+    float:right;
+  }
+}
 
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: rgb(232,130,81);
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav li:hover{
+  background-color:rgb(169,190,192);
+}
+
+@media screen and (min-width: 550px) {
+  nav {
+    font-size:18px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  nav {
+    font-size:20px;
+  }
+}
+
+nav a{
     color: white;
-}
-
-/* Add an active class to highlight the current page */
-.activenav img{
-  width:120px;
-  padding:0;
-}
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-    display: none;
-}
-
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
     display: block;
+    line-height: 2em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+.logo-img{
+    float: left;
+    position: relative;
+    margin: 10px 15px 15px 10px;
+    padding-top:.3em;
+}
+
+@media screen and (min-width: 550px) {
+  .logo-img {
+    width:180px;
   }
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
+@media screen and (min-width: 800px) {
+  .logo-img {
+    width:200px;
   }
 }
+
+.bg-div{
+   background:rgb(3,63,68);
+   overflow: hidden;
+}
+
 
 body {
   padding: 1em;
@@ -421,6 +444,22 @@ p{
     }
 	}
 
+h4{
+  color:rgb(3,63,68);
+  text-decoration:underline;
+}
+
+@media screen and (min-width: 500px) {
+	h4 {
+		font-size:18px;
+    }
+	}
+
+@media screen and (min-width: 800px) {
+	h4 {
+		font-size:20px;
+    }
+	}
 
 .contactinfo{
   color:rgb(3,63,68);
@@ -440,39 +479,6 @@ p{
 	}
 
 
-/*about us */
-.aboutus{
-  font-size:19px;
-}
-
-@media screen and (min-width: 500px) {
-	.aboutus {
-		font-size: 22px;}
-	}
-
-@media screen and (min-width: 800px) {
-	.aboutus {
-		font-size: 25px;}
-	}
-
-.aboutusp{
-  font-family: open-sans, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size:12px;
-  line-height: 1.5;
-}
-
-@media screen and (min-width: 500px) {
-	.aboutusp {
-		font-size: 14px;}
-	}
-
-@media screen and (min-width: 800px) {
-	.aboutusp {
-		font-size: 15px;}
-	}
-
 
 /*form*/
 /* Style inputs, select elements and textareas */
@@ -487,13 +493,12 @@ input[type=text], select, textarea{
 
 /* Style the label to display next to the inputs */
 label {
-  padding: 12px 12px 12px 0;
   display: inline-block;
 }
 
 /* Style the submit button */
 input[type=submit] {
-  background-color: #4CAF50;
+  background-color: rgb(3,63,68);
   color: white;
   padding: 12px 20px;
   border: none;
@@ -512,7 +517,6 @@ input[type=submit] {
 /* Floating column for labels: 25% width */
 .col-25 {
   float: left;
-  width: 25%;
   margin-top: 6px;
 }
 
@@ -537,6 +541,31 @@ input[type=submit] {
     margin-top: 0;
   }
 }
+
+.aboutus{
+  font-size:14px;
+  margin-bottom:1em;
+}
+
+@media screen and (min-width: 500px) {
+	.aboutus {
+		font-size:16px;
+    margin-bottom:1em;}
+	}
+
+  @media screen and (min-width: 800px) {
+  	.aboutus {
+  		font-size:18px;
+      margin-left: 1em;
+      margin-right: 1em;
+      margin-bottom:2em;}
+  	}
+
+  @media screen and (min-width: 1100px) {
+    .aboutus {
+      margin-left: 2em;
+      margin-right: 2em;}
+    }
 
 div, section, main, aside, header, footer {
   padding: .5em;
