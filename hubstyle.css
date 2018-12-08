@@ -14,10 +14,32 @@ header {
   margin-bottom:1em;
 }
 
+.headline{
+  color: rgb(3,63,68);
+  font-family: oswald, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size:27px;
+  padding-left:1em;
+  margin-top:1em;
+  text-decoration:underline;
+}
+
+p{
+  font-family: open-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:16px;
+  border: none;
+  color: rgb(3,63,68);
+  margin-left:1em;
+  margin-bottom:1.5em;
+}
+
 h1{
   color:white;
   font-family: oswald, sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   font-size:25px;
   padding-left:1em;
@@ -52,7 +74,7 @@ a {
   font-family: open-sans, sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: rgb(3,63,68);
+  background-color: rgb(169,190,192);
   border: none;
   color: white;
   padding: 10px 15px;
