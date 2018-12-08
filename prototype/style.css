@@ -358,6 +358,20 @@ p{
 
 /* Agents page */
 
+.agentsp{
+  font-size:14px;
+}
+
+@media screen and (min-width: 500px) {
+	.agentsp {
+		font-size:16px;}
+	}
+
+@media screen and (min-width: 800px) {
+	.agentsp {
+		font-size:18px}
+	}
+
 .agent {
     margin: 3px;
     float:left;
@@ -383,6 +397,16 @@ p{
   text-align:left;
   font-size:14px;
 }
+
+@media screen and (min-width: 500px) {
+	.desc {
+		font-size:16px}
+	}
+
+@media screen and (min-width: 800px) {
+	.desc {
+		font-size:18px}
+	}
 
 .brianlist{
   list-style-type: none;
