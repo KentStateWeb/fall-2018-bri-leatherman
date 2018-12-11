@@ -662,3 +662,8 @@ footer ul{
     padding-right:1em;
     }
 	}
+
+  footer a{
+    color:white;
+    text-decoration:none;
+  }
